@@ -1,0 +1,227 @@
+.card {
+    max-width: 30rem;
+    width: calc(100% - 2rem);
+    border: 0;
+    overflow: hidden;
+  }
+  
+  :root {
+    --width: 70px;
+    --dot: 10px;
+  }
+  
+  .title h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  input {
+    text-align: center;
+  }
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  /* Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  .radius-5 {
+    border-radius: 5px;
+  }
+  /* increment module  */
+  .increment-module .form-control {
+    width: 30%;
+  }
+  
+  .form-check {
+    position: relative;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+  }
+  .form-check-label {
+    cursor: pointer;
+    height: 7rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid var(--bs-primary);
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .form-check-label span {
+    font-size: 1.4rem;
+  }
+  .form-check-label input {
+    margin: 0 !important;
+  }
+  .running {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    display: none;
+  }
+  .modal-wrap {
+    background-color: white;
+    height: 60vh;
+    width: 100%;
+    max-width: 60vh;
+    margin: auto;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  .contrats h2,
+  .contrats h3 {
+    height: 4rem;
+    line-height: 4rem;
+  }
+  .contrats h3 {
+    font-size: 1.4rem;
+  }
+  input[type="radio"] {
+    border-color: black;
+  }
+  
+  /* dice animation  */
+  .dice-wrap {
+    width: 100%;
+    height: calc(100% - 10rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  .dice {
+    height: var(--width);
+    width: var(--width);
+    position: relative;
+    transform-style: preserve-3d;
+    transform: translateZ(-100px) rotateY(-45deg) rotateX(-45deg);
+    transition: transform 1s;
+  }
+  
+  .panel {
+    border-radius: 10px;
+    width: var(--width);
+    height: var(--width);
+    perspective: calc(var(--width) * 2);
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .dot {
+    display: block;
+    width: var(--dot);
+    height: var(--dot);
+    border-radius: 50%;
+    margin: 4px;
+    background-color: gold;
+  }
+  
+  .side {
+    position: absolute;
+    background-color: black;
+    width: var(--width);
+    height: var(--width);
+    border-radius: 10px;
+    line-height: var(--width);
+  }
+  
+  .one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateX(-90deg) translateZ(calc(var(--width) / 2));
+    z-index: 1;
+  }
+  
+  .two {
+    display: flex;
+    justify-content: space-between;
+    transform: rotateY(180deg) translateZ(calc(var(--width) / 2));
+    z-index: 2;
+  }
+  
+  .two .dot:nth-of-type(2) {
+    align-self: flex-end;
+  }
+  
+  .three {
+    display: flex;
+    justify-content: space-between;
+    transform: rotateY(90deg) translateZ(calc(var(--width) / 2));
+    z-index: 3;
+  }
+  
+  .three .dot:nth-of-type(2) {
+    align-self: center;
+  }
+  
+  .three .dot:nth-of-type(3) {
+    align-self: flex-end;
+  }
+  
+  .four {
+    z-index: 4;
+    transform: rotateY(0deg) translateZ(calc(var(--width) / 2));
+  }
+  
+  .four,
+  .six {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .four .kolona,
+  .six .kolona {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .five {
+    display: flex;
+    justify-content: space-between;
+    transform: rotateY(-90deg) translateZ(calc(var(--width) / 2));
+    z-index: 5;
+  }
+  
+  .five .kolona {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .five .kolona:nth-of-type(2) {
+    justify-content: center;
+  }
+  
+  .six {
+    transform: rotateX(90deg) translateZ(calc(var(--width) / 2));
+    z-index: 6;
+  }
+  .h6,
+  h6 {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  .wrap {
+    margin-top: 1.5rem;
+  }
+  .wrap ul {
+    margin-bottom: 0;
+  }

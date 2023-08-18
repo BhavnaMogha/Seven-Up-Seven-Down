@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>7 UP DOWN GAME by Bhavna</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="container-fluid bg-dark">
+            <div class="row">
+                <div class="col-md-5">
+                    <form action="" id="form" class=" vh-100 w-100 d-flex justify-content-center align-items-center">
+                        <div class=" card p-0">
+                            <div class="bg-primary text-center p-3">
+                                <h2 class="text-white pb-2 radius-5 fw-bold">7 Up Down</h2>
+                                <hr class="text-white">
+                                <div class="balance">
+                                    <h4 class="d-flex align-items-center justify-content-center text-white">
+                                        <span class="material-symbols-outlined me-2"> payments </span><span
+                                            id="balance">100</span>$
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="mb-3 text-center">
+                                    <h5 for="moneyPut" class="form-label fw-bold">Amount to BET</h5>
+                                    <div
+                                        class="increment-module d-flex justify-content-center align-items-center gap-2">
+                                        <button class="btn btn-primary d-flex align-items-center" type="button"
+                                            id="sub">
+                                            <span class="material-symbols-outlined"> remove </span>
+                                        </button>
+                                        <input type="number" class="form-control" id="moneyPut" value="5">
+                                        <button class="btn btn-primary d-flex align-items-center" type="button"
+                                            id="add">
+                                            <span class="material-symbols-outlined"> add </span>
+                                        </button>
+                                    </div>
+                                    <div class="errorAmount text-danger" id="errorAmount"></div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="row px-4 pb-4">
+                                    <div class="col-4">
+                                        <div class="form-check">
+                                            <label class="form-check-label" for="flexRadioDefault1">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                    id="flexRadioDefault1"
+                                                    value="down">
+                                                <span>2 - 6</span>
+                                                <span
+                                                    class="position-absolute top-0 start-100 translate-middle p-2 bg-warning border border-light rounded-pill text-dark badge">2x</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="form-check">
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                    id="flexRadioDefault2"
+                                                    value="perfect">
+                                                <span>7</span>
+                                                <span
+                                                    class="position-absolute top-0 start-100 translate-middle p-2 bg-success border border-light rounded-pill text-light badge">4x</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="form-check">
+                                            <label class="form-check-label" for="flexRadioDefault3">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                    id="flexRadioDefault3"
+                                                    value="up">
+                                                <span>8 - 12 </span>
+                                                <span
+                                                    class="position-absolute top-0 start-100 translate-middle p-2 bg-warning border border-light rounded-pill text-dark badge">2x</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <p class="text-danger text-center mt-2" id="error-checkbox"></p>
+                                    </div>
+                                    <div class="col-6">
+                                        <button class="btn btn-primary w-100" id="bet">Bet</button>
+                                    </div>
+                                    <div class="col-6">
+                                        <button class="btn btn-primary w-100" id="reset" type="button">Reset</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-7">
+                    <div class="guides p-1 text-light text-start">
+                        <div class="wrap">
+                            <h6 class="h6">What is 7 Up 7 Down?</h6>
+                            <ul>
+                                <li> 7 Up 7 Down is a dice-based casino game. </li>
+                                <li>To win, you have to guess if the total on a pair of dice is equal to 7, above 7, or
+                                    below 7 </li>
+                                <li>If your call matches the total value, you win, or else you lose. </li>
+                            </ul>
+                        </div>
+                        <div class="wrap">
+                            <h6>How to Play?</h6>
+                            <ul>
+                                <li>You begin this game with an initial bet on the options on the table using chips.
+                                </li>
+                                <li>Then the pair of dice is sprung by the dealer using a dice jar and the final result
+                                    is revealed. </li>
+                                <li>If the sum of the numbers on the two dice is as per your initial bet, you win. Or
+                                    else you lose the round.</li>
+                            </ul>
+                        </div>
+                        <div class="wrap">
+                            <h6>Rules to Know</h6>
+                            <ul>
+                                <li>The 7 Up 7 Down table has a felt with the three betting options written on it. </li>
+                                <li>The three options include less than 7, greater than 7, and equal to 7.</li>
+                                <li>Each player starts the game by placing their chips on one or two of these options
+                                    before the two dice are rolled.</li>
+                                <li>Numbers below 7 (1,2,3,4,5,6) are known as Seven Down. If you win by calling a Seven
+                                    Down, the payout is 1x the betting amount.</li>
+                                <li>Numbers above 7 (8,9,10,11,12) are known as Seven Up. If you win by calling a Seven
+                                    Up, the payout is 1x the betting amount.</li>
+                                <li>The number 7 is called a Lucky Seven. If you win by calling a Lucky Seven bet, the
+                                    payout is 4x the betting amount.</li>
+                                <li>If the final position of the two dice doesn’t indicate a clear result, either by
+                                    landing on top of each other or by leaning against the jar, the pair of dice are
+                                    rolled again. </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="running" id="animation">
+                    <div class="modal-wrap">
+                        <div class="contrats mb-2">
+                            <h2 class="fw-bold bg-primary m-0 text-light px-2 text-center">Number is <span
+                                    class="text-warning"
+                                    id="resultNumber">please wait</span></h2>
+                            <h3 class="fw-bold bg-info m-0 text-light px-2 text-center" id="resultText">Your result will
+                                appear here </h3>
+                        </div>
+                        <div class="dice-wrap">
+                            <div class="dice" id="dice1">
+                                <div class="side one">
+                                    <span class="dot"></span>
+                                </div>
+                                <div class="side two">
+                                    <span class="dot"></span>
+                                    <span class="dot"></span>
+                                </div>
+                                <div class="side three">
+                                    <span class="dot"></span>
+                                    <span class="dot"></span>
+                                    <span class="dot"></span>
+                                </div>
+                                <div class="side four">
+                                    <div class="kolona">
+                                        <span class="dot"></span>
+                                        <span class="dot"></span>
+                                    </div>
+                                    <div class="kolona">
+                                        <span class="dot"></span>
+                                        <span class="dot"></span>
+                                    </div>
+                                </div>
+                                <div class="side five">
+                                    <div class="kolona">
+                                        <span class="dot"></span>
+                                        <span class="dot"></span>
+                                    </div>
+                                    <div class="kolona">
+                                        <span class="dot"></span>
+                                    </div>
+                                    <div class="kolona">
+                                        <span class="dot"></span>
+                                        <span class="dot"></span>
+                                    </div>
+                                </div>
+                                <div class="side six">
+                                    <div class="kolona">
+                                        <span class="dot"></span>
+                                        <span class="dot"></span>
+                                    </div>
+                                    <div class="kolona">
+                                        <span class="dot"></span>
+                                        <span class="dot"></span>
+                                    </div>
+                                    <div class="kolona">
+                                        <span class="dot"></span>
+                                        <span class="dot"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dice" id="dice2">
+                                <div class="side one">
+                                    <span class="dot"></span>
+                                </div>
+                                <div class="side two">
+                                    <span class="dot"></span>
+                                    <span class="dot"></span>
+                                </div>
+                                <div class="side three">
+                                    <span class="dot"></span>
+                                    <span class="dot"></span>
+                                    <span class="dot"></span>
+                                </div>
+                                <div class="side four">
+                                    <div class="kolona">
+                                        <span class="dot"></span>
+                                        <span class="dot"></span>
+                                    </div>
+                                    <div class="kolona">
+                                        <span class="dot"></span>
+                                        <span class="dot"></span>
+                                    </div>
+                                </div>
+                                <div class="side five">
+                                    <div class="kolona">
+                                        <span class="dot"></span>
+                                        <span class="dot"></span>
+                                    </div>
+                                    <div class="kolona">
+                                        <span class="dot"></span>
+                                    </div>
+                                    <div class="kolona">
+                                        <span class="dot"></span>
+                                        <span class="dot"></span>
+                                    </div>
+                                </div>
+                                <div class="side six">
+                                    <div class="kolona">
+                                        <span class="dot"></span>
+                                        <span class="dot"></span>
+                                    </div>
+                                    <div class="kolona">
+                                        <span class="dot"></span>
+                                        <span class="dot"></span>
+                                    </div>
+                                    <div class="kolona">
+                                        <span class="dot"></span>
+                                        <span class="dot"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+            crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+    </body>
+
+</html>
